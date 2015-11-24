@@ -3,8 +3,15 @@
     <head>
       <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css'/>
       <link rel='stylesheet' href='/stylesheets/tripplanner.css'/>
+      <script src="/bootstrap/js/bootstrap.min.js" defer></script>
+      <script src="/jquery/jquery.min.js" defer></script>
     </head>
     <body>
+
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}   
+
     {% block body %}
     {% endblock %}
     </body>

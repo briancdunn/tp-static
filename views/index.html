@@ -1,28 +1,30 @@
 {% extends 'layout.html' %}
 
+
 {% block body %}
 
-<h4 class='label label-default'>Hotels</h4>
-<ul>
-    {% for hotel in hotels %}
-    <li> {{ hotel.name }} </li>
-    {% endfor %}
-</ul>
-<h4>Activities</h4>
-<ul>
-    {% for activity in activities %}
-    <li> {{ activity.name }} </li>
-    {% endfor %}
-</ul>
-<h4>Restaurants</h4>
-<ul>
-    {% for restaurant in restaurants %}
-    <li> {{ restaurant.name }} </li>
-    {% endfor %}
-</ul>
 
-<!-- Maybe change the above to <select>
-    with <option>s
- -->
+    <h4>Hotels</h4>
+    <ul>
+        {% for hotel in hotels %}
+        <li> {{ hotel.name }} </li>
+        {% endfor %}
+    </ul>
+    <h4>Activities</h4>
+    <ul>
+        {% for activity in activities %}
+        <li> {{ activity.name }} </li>
+        {% endfor %}
+    </ul>
+    <h4>Restaurants</h4>
+    <ul>
+        {% for restaurant in restaurants %}
+        <li> {{ restaurant.name }} </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Maybe change the above to <select>
+        with <option>s
+     -->
 
 {% endblock %}

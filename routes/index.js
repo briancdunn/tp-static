@@ -8,6 +8,8 @@ var Activity = models.Activity;
 var Restaurant = models.Restaurant;
 
 
+
+
 router.get('/', function(req,res,next){
     var hotelList = Hotel.find({}).exec();
     var activityList = Activity.find({}).exec();
@@ -23,6 +25,8 @@ router.get('/', function(req,res,next){
                             activities: activities,
                             restaurants: restaurants});
     })
-})
+});
+
+
 
 module.exports = router;
