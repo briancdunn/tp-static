@@ -21,6 +21,7 @@ app.use('/bootstrap', express.static(path.join(__dirname, './node_modules/bootst
 
 app.use('/jquery', express.static(path.join(__dirname, './node_modules/jquery/dist')));
 
+app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
