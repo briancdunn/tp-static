@@ -10,12 +10,13 @@
     </head>
     <body>
 
-    {% block navbar %}
-        {% include 'navbar.html' %}
-    {% endblock %}   
-
-    {% block body %}
-    {% endblock %}
+          {% block navbar %}
+              {% include 'navbar.html' %}
+          {% endblock %}   
+        <div class="container-fluid">
+          {% block body %}
+          {% endblock %}
+      </div>
     </body>
 
 </html>

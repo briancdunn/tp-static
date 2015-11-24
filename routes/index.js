@@ -18,9 +18,12 @@ router.get('/', function(req,res,next){
     .then(function(data){
         //console.log(data);       
         //res.json(data);
-        var hotels = data[0];
-        var activities = data[1];
-        var restaurants = data[2];
+        var alphabetize = function(a,b) {
+            return a.name < b.name ? -1 : 1;
+        };
+        var hotels = data[0].sort(alphabetize);
+        var activities = data[1].sort(alphabetize);
+        var restaurants = data[2].sort(alphabetize);
         res.render('index', {page: 'home',
                             hotels: hotels, 
                             activities: activities,
