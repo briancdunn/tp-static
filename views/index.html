@@ -3,28 +3,57 @@
 
 {% block body %}
 
+<div class="container-fluid">
+<div class="row"> 
 
-    <h4>Hotels</h4>
-    <ul>
-        {% for hotel in hotels %}
-        <li> {{ hotel.name }} </li>
-        {% endfor %}
-    </ul>
-    <h4>Activities</h4>
-    <ul>
-        {% for activity in activities %}
-        <li> {{ activity.name }} </li>
-        {% endfor %}
-    </ul>
-    <h4>Restaurants</h4>
-    <ul>
-        {% for restaurant in restaurants %}
-        <li> {{ restaurant.name }} </li>
-        {% endfor %}
-    </ul>
+    <div id="map-canvas" class="col-lg-8 col-sm-8 col-md-8 col-xs-8">
+    </div>
 
-    <!-- Maybe change the above to <select>
-        with <option>s
-     -->
+    <div id="sidepanel" class="col-lg-4 col-sm-4 col-md-4 col-xs-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <label class="control-label">Hotels</label>
+                <div class="container">
+                <div class="row">                   
+                    <select name="Hotels" class="form-control col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        {% for hotel in hotels %}
+                        <option> {{ hotel.name }} </option>
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-primary btn-circle col-lg-2 col-md-2 col-sm-2 col-xs-2">+</button>
+                </div>
+                </div>
+                 <label class="control-label">Activities</label>
+                <div class="container">
+                <div class="row">        
+                    <select name="Activities" class="form-control col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        {% for activity in activities %}
+                        <option> {{ activity.name }} </option>
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-primary btn-circle col-lg-2 col-md-2 col-sm-2 col-xs-2">+</button>
+                </div>
+                </div>
+                 <label class="control-label">Restaurants</label>
+                <div class="container">
+                <div class="row">       
+                    <select name="Restaurants" class="form-control col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        {% for restaurant in restaurants %}
+                        <option> {{ restaurant.name }} </option>
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-primary btn-circle col-lg-2 col-md-2 col-sm-2 col-xs-2">+</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+
 
 {% endblock %}

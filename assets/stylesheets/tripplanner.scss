@@ -4,18 +4,29 @@ ul {
   }
 }
 
-.navbar-inverse .navbar-nav > li > a, .navbar-inverse a.navbar-brand  {
+.navbar-inverse {
+  margin: 0;
+  border-radius: 0;
+  background-color: purple;
+}
+
+/*.navbar-inverse .navbar-nav > li > a, .navbar-inverse a.navbar-brand  {
   font-size: 14px;
-    padding-top: 5px !important;
+  padding-top: 5px !important;
   padding-bottom: 4px !important;
   
 }
 
-.navbar-inverse div.navbar-header, .navbar-inverse .navbar-nav {
+.navbar-inverse div.navbar-header,
+.navbar-inverse .navbar-nav,
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-toggle
+ {
   height: 30px;
 }
 
 .navbar-inverse {
+  margin: 0;
   border-radius: 0%;
   background-color: purple;
   height: 30px !important;
@@ -27,11 +38,32 @@ ul {
       }
     }
   }
+}*/
+
+#map-canvas {
+  height: 100vh;
+  /*float: left;*/
+}
+
+#sidepanel {
+/*  float: right;*/
+  height: 100vh;
+  background-color: purple;
+  /*opacity: 0.4;*/
+}
+
+
+.btn-circle {
+  border-radius: 100%;
 }
 
 * {
   box-sizing: border-box;
 }
+
+
+
+
 /*
 #dothis {
   background-color: darken(purple, 10%);
