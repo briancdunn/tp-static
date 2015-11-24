@@ -1,2 +1,27 @@
 ul li {
   color: purple; }
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse a.navbar-brand {
+  font-size: 14px;
+  padding-top: 5px !important;
+  padding-bottom: 4px !important; }
+
+.navbar-inverse div.navbar-header, .navbar-inverse .navbar-nav {
+  height: 30px; }
+
+.navbar-inverse {
+  border-radius: 0%;
+  background-color: purple;
+  height: 30px !important;
+  min-height: 30px !important; }
+  .navbar-inverse .navbar-nav > li.active > a {
+    background-color: #4d004d; }
+
+* {
+  box-sizing: border-box; }
+
+/*
+#dothis {
+  background-color: darken(purple, 10%);
+      color: orange;
+}*/

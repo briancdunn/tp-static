@@ -21,7 +21,8 @@ router.get('/', function(req,res,next){
         var hotels = data[0];
         var activities = data[1];
         var restaurants = data[2];
-        res.render('index', {hotels: hotels, 
+        res.render('index', {page: 'home',
+                            hotels: hotels, 
                             activities: activities,
                             restaurants: restaurants});
     })
