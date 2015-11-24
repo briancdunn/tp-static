@@ -3,14 +3,29 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     morgan = require('morgan'),
     bluebird = require('bluebird'),
-    routes = require('./routes');
+    routes = require('./routes'),
+    path = require('path');
 
 var app = express();
 
+app.set('views', path.join(__dirname, './views'));
+app.set('view engine', 'html');
+app.engine('html', swig.renderFile);
+swig.setDefaults({ cache: false });
+
+
+
 app.use(morgan('dev'));
+
+app.use('/bootstrap', express.static(path.join(__dirname, './node_modules/bootstrap/dist')));
+
+app.use('/jquery', express.static(path.join(__dirname, './node_modules/jquery/dist')));
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(routes);
 
 app.use(function(req,res,next) {
   var err = new Error('Not Found');
